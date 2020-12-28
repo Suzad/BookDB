@@ -14,6 +14,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1lqIIJ3HJyYcFVNzMnE9TGCiFKP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,7 +26,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Suzad/APIAssingment/APIBuilding/RatingService" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -69,6 +72,9 @@
       <workItem from="1608881904043" duration="1327000" />
       <workItem from="1608999149847" duration="735000" />
       <workItem from="1609035749680" duration="1655000" />
+      <workItem from="1609040229448" duration="4201000" />
+      <workItem from="1609065144854" duration="1438000" />
+      <workItem from="1609171983390" duration="3058000" />
     </task>
     <servers />
   </component>
