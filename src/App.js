@@ -11,16 +11,9 @@ const App=()=>{
     const [currentPage,setCurrentPage]=useState(1)
     const [totalPages,setTotalPages]=useState(0)
 
-    // useEffect(async () => {
-    //     if (searchTerm != null) {
-    //         await nextPage(currentPage);
-    //     }
-    // }, []);
-
     const handleSubmit=async(event)=>{
         event.preventDefault()
         await getBooksByTerm(searchTerm,setBooks,setTotalPages,currentPage)
-        //console.log(books)
     }
 
     const handleChange=(event)=>{
@@ -28,6 +21,7 @@ const App=()=>{
     }
 
     const nextPage = async (pageNumber) => {
+
         setCurrentPage(pageNumber);
         await getBooksByTerm(searchTerm, setBooks, setTotalPages, currentPage);
     }
