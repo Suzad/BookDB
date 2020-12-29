@@ -9,7 +9,6 @@ const Navbar=()=>{
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         <li><a href="/">Home</a></li>
                         <li><a href="/profile">Profile</a></li>
-                        {/*<li><a href="collapsible.html">My Profile</a></li>*/}
                     </ul>
                 </div>
             </nav>

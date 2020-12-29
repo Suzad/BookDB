@@ -8,17 +8,28 @@ import Pagination from "./components/Pagination";
 const App=()=>{
     const [searchTerm,setSearchTerm]=useState("")
     const [books,setBooks]=useState([])
-    //const [currentPage,setCurrentPage]=useState(0)
-    //const [totalPages,setTotalPages]=useState(0)
+    const [currentPage,setCurrentPage]=useState(1)
+    const [totalPages,setTotalPages]=useState(0)
+
+    // useEffect(async () => {
+    //     if (searchTerm != null) {
+    //         await nextPage(currentPage);
+    //     }
+    // }, []);
 
     const handleSubmit=async(event)=>{
         event.preventDefault()
-        await getBooksByTerm(searchTerm,setBooks/*,setTotalPages*/)
-        console.log(books)
+        await getBooksByTerm(searchTerm,setBooks,setTotalPages,currentPage)
+        //console.log(books)
     }
 
     const handleChange=(event)=>{
         setSearchTerm(event.target.value)
+    }
+
+    const nextPage = async (pageNumber) => {
+        setCurrentPage(pageNumber);
+        await getBooksByTerm(searchTerm, setBooks, setTotalPages, currentPage);
     }
 
     return(
@@ -26,7 +37,7 @@ const App=()=>{
             <Navbar/>
             <Searchbar handleChange={handleChange} handleSubmit={handleSubmit}/>
             <Booklist books={books}/>
-            {/*{totalPages>1?<Pagination/>:""}*/}
+            {totalPages>1?<Pagination nextPage={nextPage} currentPage={currentPage} totalPages={totalPages}/>:""}
         </div>
     )
 }
